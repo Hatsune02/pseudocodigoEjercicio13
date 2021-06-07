@@ -1,0 +1,38 @@
+Algoritmo Ejercicio13
+	totalSuma <- 0
+	totalDivision <- 0
+	escoger <- ''
+	Repetir
+		Escribir 'a. Sumar dos números'
+		Escribir 'b. Dividir dos números (no se puede dividir por cero)'
+		Escribir 'c. Salir'
+		Escribir 'Escoger una opción'
+		Leer escoger
+		Si (escoger='a') Entonces
+			Escribir 'Ingrese primero número'
+			Leer var1
+			Escribir 'Ingrese segundo número'
+			Leer var2
+			totalSuma <- var1+var2
+			Escribir 'El resultado de la suma es: ',totalSuma
+			Escribir 'aceptar'
+			Leer aceptar
+		FinSi
+		Si (escoger='b') Entonces
+			Escribir 'Ingrese el dividendo'
+			Leer dividendo
+			Escribir 'Ingrese el divisor'
+			Leer divisor
+			Si (divisor=0) Entonces
+				Escribir 'Esponja, enloqueciste?!'
+				Escribir 'aceptar'
+				Leer aceptar
+			SiNo
+				totalDivision <- dividendo/divisor
+				Escribir 'El resultado de la división es: ',totalDivision
+				Escribir 'aceptar'
+				Leer aceptar
+			FinSi
+		FinSi
+	Hasta Que (escoger='c')
+FinAlgoritmo
